@@ -24,7 +24,7 @@ echo -e "\nInstalling prereqs...\n$HR"
 pacman -S --noconfirm gptfdisk btrfs-progs
 
 echo "-------------------------------------------------"
-echo "-------select your disk to format----------------"
+echo "-------Select your Partition to Format----------------"
 echo "-------------------------------------------------"
 lsblk
 echo "Please enter disk to work on: (example /dev/sda)"
