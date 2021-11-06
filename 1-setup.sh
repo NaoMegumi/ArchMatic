@@ -7,21 +7,21 @@
 #  Arch Linux Post Install Setup and Config
 #-------------------------------------------------------------------------
 echo "--------------------------------------"
-echo "--          Network Setup           --"
+echo "--          Penyetelan Jaringan           --"
 echo "--------------------------------------"
 pacman -S networkmanager dhclient --noconfirm --needed
 systemctl enable --now NetworkManager
 
 echo "--------------------------------------"
-echo "--      Set Password for Root       --"
+echo "--      Atur Password untuk Root       --"
 echo "--------------------------------------"
-echo "Enter password for root user: "
+echo "Masukkan password untuk pengguna root: "
 passwd root
 
 if ! source install.conf; then
-	read -p "Please enter hostname:" hostname
+	read -p "Mohon masukkan hostname:" hostname
 
-	read -p "Please enter username:" username
+	read -p "Mohon masukkan username:" username
 echo "username=$username" >> ${HOME}/ArchMatic/install.conf
 echo "password=$password" >> ${HOME}/ArchMatic/install.conf
 fi
